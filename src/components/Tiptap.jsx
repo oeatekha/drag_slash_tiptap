@@ -8,13 +8,12 @@ import {
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
 import Commands from "./suggestion/commands";
-import getSuggestionItems from "./suggestion/items";
-import renderItems from "./suggestion/renderItems";
+import getSuggestionItems from "./suggestion/suggestion";
+//import renderItems from "./suggestion/renderItems";
 
 import Document from "@tiptap/extension-document";
 
 import { DBlock } from "./dBlock";
-import { SlashCommands } from "./plugins/SlashCommands";
 
 import "./Tiptap.css";
 
@@ -58,12 +57,12 @@ export const Tiptap = () => {
       }),
       Commands.configure({
         suggestion: {
-          items: getSuggestionItems,
-          render: renderItems
+          items: getSuggestionItems
+          //render: renderItems
         }
       }),
-      SlashCommands,
       CustomDocument,
+      //Commands,
       DBlock,
       FloatingMenu,
       BubbleMenu

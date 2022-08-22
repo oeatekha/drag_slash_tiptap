@@ -1,18 +1,18 @@
-import { Extension } from "@tiptap/core";
-import Suggestion from "@tiptap/suggestion";
+import { Extension } from '@tiptap/core'
+import Suggestion from '@tiptap/suggestion'
 
-const Commands = Extension.create({
-  name: "mention",
+export default Extension.create({
+  name: 'commands',
 
-  defaultOptions: {
-    suggestion: {
-      char: "/",
-      startOfLine: false,
-      command: ({ editor, range, props }) => {
-        console.log("REGISTERD /");
-        props.command({ editor, range, props });
+  addOptions() {
+    return {
+      suggestion: {
+        char: '/',
+        command: ({ editor, range, props }) => {
+          props.command({ editor, range })
+        },
       },
-    },
+    }
   },
 
   addProseMirrorPlugins() {
@@ -21,8 +21,6 @@ const Commands = Extension.create({
         editor: this.editor,
         ...this.options.suggestion,
       }),
-    ];
+    ]
   },
-});
-
-export default Commands;
+})

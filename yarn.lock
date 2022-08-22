@@ -295,7 +295,7 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
-"@tabler/icons@^1.85.0":
+"@tabler/icons@^1.83.1":
   version "1.85.0"
   resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-1.85.0.tgz#22e397e2ab65fe2661671c0e956c3257449886af"
   integrity sha512-FSKajQY3axDj/t5x2LDz+y0/43O2dqcZUdLRL0YzvAHGTicYGe3nV6OUfjeZHMdB8XN9RZNOSHVvRgHM4v4kpA==

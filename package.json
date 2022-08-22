@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@benrbray/prosemirror-math": "^0.2.2",
-    "@tabler/icons": "^1.85.0",
+    "@tabler/icons": "^1.83.1",
     "@tiptap/extension-bubble-menu": "^2.0.0-beta.61",
     "@tiptap/extension-code-block-lowlight": "^2.0.0-beta.73",
     "@tiptap/extension-dropcursor": "^2.0.0-beta.29",

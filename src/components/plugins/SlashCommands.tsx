@@ -11,7 +11,7 @@ import {
   IconLetterA,
   IconList,
   IconListNumbers,
-  IconQuote
+  IconQuote,
 } from "@tabler/icons";
 
 export type CommandsOption = {
@@ -44,18 +44,18 @@ export const Commands = Extension.create<CommandsOption>({
         startOfLine: false,
         command: ({ editor, range, props }: any) => {
           props.command({ editor, range });
-        }
-      }
+        },
+      },
     };
   },
   addProseMirrorPlugins() {
     return [
       Suggestion({
         editor: this.editor,
-        ...this.options.suggestion
-      })
+        ...this.options.suggestion,
+      }),
     ];
-  }
+  },
 });
 
 const commands = [
@@ -65,7 +65,7 @@ const commands = [
     icon: <IconLetterA size={16} />,
     command: ({ editor, range }: { editor: Editor; range: Range }) => {
       editor.chain().focus().deleteRange(range).setNode("paragraph").run();
-    }
+    },
   },
   {
     title: "Heading",
@@ -78,7 +78,7 @@ const commands = [
         .deleteRange(range)
         .setNode("heading", { level: 1 })
         .run();
-    }
+    },
   },
   {
     title: "Ordered List",
@@ -86,7 +86,7 @@ const commands = [
     description: "Create a list with numberings",
     command: ({ editor, range }: { editor: Editor; range: Range }) => {
       editor.chain().focus().deleteRange(range).toggleOrderedList().run();
-    }
+    },
   },
   {
     title: "Bulleted List",
@@ -94,7 +94,7 @@ const commands = [
     icon: <IconList size={16} />,
     command: ({ editor, range }: { editor: Editor; range: Range }) => {
       editor.chain().focus().deleteRange(range).toggleBulletList().run();
-    }
+    },
   },
   {
     title: "Quote",
@@ -102,7 +102,7 @@ const commands = [
     icon: <IconQuote size={16} />,
     command: ({ editor, range }: { editor: Editor; range: Range }) => {
       editor.chain().focus().deleteRange(range).toggleBlockquote().run();
-    }
+    },
   },
   {
     title: "Code Block",
@@ -110,8 +110,8 @@ const commands = [
     icon: <IconCode size={16} />,
     command: ({ editor, range }: { editor: Editor; range: Range }) => {
       editor.chain().focus().deleteRange(range).toggleCodeBlock().run();
-    }
-  }
+    },
+  },
 ];
 
 const fuse = new Fuse(commands, { keys: ["title", "description", "shortcut"] });
@@ -129,7 +129,7 @@ export const SlashCommands = Commands.configure({
         onStart(props) {
           component = new ReactRenderer(CommandsList as any, {
             editor: props.editor as Editor,
-            props
+            props,
           });
 
           popup = tippy("body", {
@@ -139,13 +139,13 @@ export const SlashCommands = Commands.configure({
             showOnCreate: true,
             interactive: true,
             trigger: "manual",
-            placement: "bottom-start"
+            placement: "bottom-start",
           });
         },
         onUpdate(props) {
           component.updateProps(props);
           popup[0].setProps({
-            getReferenceClientRect: props.clientRect
+            getReferenceClientRect: props.clientRect,
           });
         },
         onKeyDown(props) {
@@ -159,7 +159,7 @@ export const SlashCommands = Commands.configure({
               "ArrowUp",
               "ArrowDown",
               "ArrowLeft",
-              "ArrowRight"
+              "ArrowRight",
             ].indexOf(props.event.key) > -1
           ) {
             props.event.preventDefault();
@@ -169,8 +169,8 @@ export const SlashCommands = Commands.configure({
         onExit() {
           popup[0].destroy();
           component.destroy();
-        }
+        },
       };
-    }
-  }
+    },
+  },
 });
