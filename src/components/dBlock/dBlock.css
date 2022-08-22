@@ -1,0 +1,18 @@
+.handle {
+  position: absolute;
+  top: 19px;
+  left: -15px;
+
+  color: lightgray;
+  font-weight: 800;
+  visibility: visible;
+}
+
+.handle:hover {
+  cursor: grab;
+  color: black;
+}
+
+.handle-container {
+  position: relative;
+}

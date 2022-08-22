@@ -1,0 +1,38 @@
+{
+  "name": "my-vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@benrbray/prosemirror-math": "^0.2.2",
+    "@tabler/icons": "^1.85.0",
+    "@tiptap/extension-bubble-menu": "^2.0.0-beta.61",
+    "@tiptap/extension-code-block-lowlight": "^2.0.0-beta.73",
+    "@tiptap/extension-dropcursor": "^2.0.0-beta.29",
+    "@tiptap/extension-floating-menu": "^2.0.0-beta.56",
+    "@tiptap/extension-highlight": "^2.0.0-beta.35",
+    "@tiptap/extension-image": "^2.0.0-beta.30",
+    "@tiptap/extension-underline": "^2.0.0-beta.25",
+    "@tiptap/react": "^2.0.0-beta.114",
+    "@tiptap/starter-kit": "^2.0.0-beta.191",
+    "@tiptap/suggestion": "^2.0.0-beta.97",
+    "formik": "^2.2.9",
+    "fuse.js": "^6.6.2",
+    "lowlight": "^2.7.0",
+    "prosemirror-inputrules": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
+  }
+}

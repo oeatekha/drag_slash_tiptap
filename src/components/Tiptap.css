@@ -1,0 +1,52 @@
+/* ⭐️ PROSE MIRROR CONTAINER */
+@import url("https://rsms.me/inter/inter.css");
+.ProseMirror {
+  font-family: "Inter", sans-serif;
+  /* background-color: rgb(227, 227, 227); */
+
+  margin: auto;
+  margin-top: 32px;
+  width: 800px;
+
+  text-align: left;
+
+  /* padding: 16px 16px; */
+  padding-bottom: 400px;
+}
+
+.ProseMirror:focus {
+  outline-style: none;
+}
+
+/* ⭐️ CHILDREN */
+.editor-child {
+  padding: 4px;
+}
+.editor-child:hover {
+  /* background-color: rgb(248, 248, 248); */
+  cursor: text;
+}
+.editor-image {
+  width: 80%;
+  margin-left: 10%;
+}
+.editor-image:hover {
+  cursor: grab;
+  text-align: center;
+}
+
+/* ⭐️ BUTTON */
+button {
+  font-size: 16px;
+  padding: 4px 6px;
+  margin: 2px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button:focus {
+  outline-style: none;
+  background-color: black;
+  color: white;
+}

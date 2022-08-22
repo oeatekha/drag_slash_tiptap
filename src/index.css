@@ -1,0 +1,7 @@
+.flex {
+  display: flex;
+}
+
+.node-view-content {
+  min-width: 1em;
+}
